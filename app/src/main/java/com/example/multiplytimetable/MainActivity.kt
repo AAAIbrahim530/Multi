@@ -3,6 +3,7 @@ package com.example.multiplytimetable
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,10 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        
+
         val button = findViewById<Button>(R.id.multi)
+        val numberInput = findViewById<EditText>(R.id.number)
+
         button.setOnClickListener {
             val intent = Intent(this, Display::class.java)
+            intent.putExtra("numberInput"
+                , numberInput.text.toString())
             startActivity(intent)
         }
 
