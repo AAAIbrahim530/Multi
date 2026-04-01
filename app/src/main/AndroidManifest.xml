@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiplyTimeTable">
         <activity
+            android:name=".Display"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
