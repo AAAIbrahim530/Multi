@@ -15,8 +15,15 @@ class Display : AppCompatActivity() {
 
         val bundle: Bundle? = intent.extras
         val tableString: String? = bundle?.getString("numberInput")
-        val numberInput = tableString?.toInt()
+        val number = tableString!!.toInt()
         val multiplyTable = findViewById<TextView>(R.id.textView)
+        val timesdisplay: String = "$number x tables\n\n"
+
+        multiplyTable.text = timesdisplay
+
+
+
+
 
 
 
