@@ -20,10 +20,15 @@ class Display : AppCompatActivity() {
         var timesdisplay: String = "$number x tables\n\n"
         //creating counter for while loop
         var count = 1
-        //displaying the number the user entered on the second page
+        //displaying the number the user entered on the second page next to the text x tables
         multiplyTable.text = timesdisplay
 
         while (count <= 10) {
+            //adding a continue
+            if (count == 5) {
+                count++
+                continue
+            }
         val answer = number * count
         timesdisplay += "$number x $count = ${answer}\n"
             //increase the count
