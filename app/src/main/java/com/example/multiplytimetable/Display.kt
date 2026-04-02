@@ -17,10 +17,18 @@ class Display : AppCompatActivity() {
         val tableString: String? = bundle?.getString("numberInput")
         val number = tableString!!.toInt()
         val multiplyTable = findViewById<TextView>(R.id.textView)
-        val timesdisplay: String = "$number x tables\n\n"
-
+        var timesdisplay: String = "$number x tables\n\n"
+        //creating counter for while loop
+        var count = 1
+        //displaying the number the user entered on the second page
         multiplyTable.text = timesdisplay
 
+        while (count <= 10) {
+        val answer = number * count
+        timesdisplay += "$number x $count = ${answer}\n"
+            //increase the count
+            count++
+        }
 
 
 
