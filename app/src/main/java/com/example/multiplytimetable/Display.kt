@@ -23,7 +23,7 @@ class Display : AppCompatActivity() {
         //displaying the number the user entered on the second page next to the text x tables
         multiplyTable.text = timesdisplay
 
-        while (count <= 10) {
+        while (count <= 20) {
             //adding a continue
             if (count == 5) {
                 count++
